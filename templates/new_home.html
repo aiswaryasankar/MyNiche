@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{user.name}}
+{% endblock %}
+
+{% block content %}
+	<h3>Grade: {{user.grade}}</h3>
+	<h3>Interests: </h3>
+
+	<h5>{% for x in intList %}{{x}}, {% endfor %}</h5>
+
+	<hr>
+	<form method='post'>
+		{{user.render_new_post() | safe }}
+		<input type='submit' value='Post'>
+		<hr>
+	</form>
+	
+	{% for p in posts %}
+		{{p.render_post() | safe}}
+	{% endfor %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

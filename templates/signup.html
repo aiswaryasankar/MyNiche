@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Welcome to the Interest Network
+{% endblock %}
+			
+{% block content %}
+<form method='post'>
+			<label>
+				<div>Username</div>
+				<input type="text" name="username" value={{username}}> 
+			</label>
+			<div class="error">{{err_user}}</div>
+			<label>
+				<div>Password</div>
+				<input type="text" name="password" value=''>
+			</label>
+			<div class='error'>{{err_pass}}
+			<label>
+				<div>Verify Password</div>
+				<input type="text" name="vPassword" value=''>
+			</label>
+			<div class="error">{{err_verify}}</div>
+			<hr>
+			<label>
+				<div>Name</div>
+				<input type="text" name="name" value = {{name}}>
+			</label>
+			<div class="error">{{err_name}}</div>
+			<label>
+				<div>Id Number</div>
+				<input type="text" name="idNum" value = {{idNum}}>
+			</label>
+			
+			<div>School Name</div>
+				<select name='school'>
+					<option>Monta Vista</option>
+					<option>Lynbrook</option>
+				</select>
+			<div class="error">{{err_school}}</div>
+			<div>Grade</div>
+				<select name='grade'>
+					<option>9th</option>
+					<option>10th</option>
+					<option>11th</option>
+					<option>12th</option>
+				</select>
+			</label>
+			<input type="submit">
+		</form>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

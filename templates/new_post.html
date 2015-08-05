@@ -1,0 +1,13 @@
+      <label>
+        <div>Interest Category</div>
+      </label>
+      <select name='interest'>
+        {% for x in range(0,25) %}
+          <option>{{topic_list[x]}}</option>
+        {% endfor %}
+      </select>
+      <br>
+      <br>
+      <div>
+        <textarea name="content">Share something interesting{{content}}</textarea>
+      </div>

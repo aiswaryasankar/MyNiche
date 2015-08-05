@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{club.name}}
+{% endblock %}
+
+{% block content %}
+	<img src = {{club.picUrl}} style="width:100px;height:60px;">
+	<h3>Interests: </h3>
+	{% for x in club.interests %}
+		<h5>{{x}}, </h5>
+	{% endfor %}
+	<h3>Officers: </h3>
+	{% for m in club.officers %}{{m}}, {% endfor %}
+	<hr>
+	<form method='post'>
+	{% if isOfficer %}
+		{{club.render_new_post() | safe }}
+		<input type='submit' value='Post'>
+		<hr>
+	{% endif %}
+	</form>
+	
+
+	{% for p in posts %}
+		{{p.render_post() | safe}}
+	{% endfor %}
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

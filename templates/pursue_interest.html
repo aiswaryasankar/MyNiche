@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Tell us how you have pursued that interest.
+{% endblock %}
+			
+{% block content %}
+<form method='post'>
+			<label>
+				<div>First Interest Type</div>
+				<input type="text" name="name1" value={{name1}}> 
+			</label>
+			<label>
+				<div>Classes</div>
+				<textarea name="classes1" >{{classes1}}</textarea>
+			</label>
+			<label>
+				<div>Clubs</div>
+				<textarea name="clubs1" >{{clubs1}}</textarea>
+			</label>
+			<label>
+				<div>Competitions</div>
+				<textarea name="competitions1" >{{competitions1}}</textarea>
+			</label>
+			
+			<label>
+				<div>Second Interest Type</div>
+				<input type="text" name="name2" value={{name2}}> 
+			</label>
+			<label>
+				<div>Classes</div>
+				<textarea name="classes2" >{{classes2}}</textarea>
+			</label>
+			<label>
+				<div>Clubs</div>
+				<textarea name="clubs2" >{{clubs2}}</textarea>
+			</label>
+			<label>
+				<div>Competitions</div>
+				<textarea name="competitions2" >{{competitions2}}</textarea>
+			</label>
+			<div class="error" >{{error}}</div>
+
+			<input type="submit">
+		</form>
+{% endblock %}
+{% block footer %}
+{% endblock %}

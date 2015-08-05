@@ -1,0 +1,27 @@
+
+<table style="width:100%">
+<tr> 
+	{% for x in range(0,5) %}
+		<td>
+			<img src = {{int_list[num*5 + x].picUrl}} style="width:300px;height:220px;">
+		</td>
+	{% endfor %}
+</tr>
+<tr>
+	{% for x in range(0,5) %}
+		<td>{{(int_list[num* 5 + x].name).strip()}}</td>
+	{% endfor %}
+</tr>
+</table>
+{#
+<script>
+function superChangeText(temp, ) {
+    temp.innerHTML = "bloob";
+}
+</script>
+#}
+<!-- {% if num == 4 %}
+	<br>
+	<br>
+	<input type="submit">
+{% endif %} -->

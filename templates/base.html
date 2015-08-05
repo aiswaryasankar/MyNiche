@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  		<link type="text/css" rel="stylesheet" href="/static/main.css" />
+			<title>
+				Interest Network
+			</title>
+	</head>
+
+	<body>
+		<h1>
+			{% block title %}
+			{% endblock %}
+		</h1>
+		<br>
+  		<div id="content">
+  			{% block content %}
+  			{% endblock %}
+  		</div>
+  		{% block footer %}
+  			<input type='submit'>
+  		{% endblock %}
+	</body>
+
+</html>

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Welcome {{name}}.
+{% endblock %}
+			
+{% block content %}
+	<form method=post>
+		{%- for key, value in m.items() recursive %}
+			<h2> {{key}} </h2>
+				{% if value.picUrl != '' %}
+					<img src= {{value.picUrl | safe }} style="width:300px;height:220px;" >
+				{% endif %}
+				{% for a, b in value.items() recursive %}
+					{% if a != 'picUrl' %}
+				 		<h4> {{a}}: </h4>
+				 		{% for e in b %}
+				 			<ul>{{e}}</ul>
+				 		{% endfor %}
+				 	{% endif %}
+				 {% endfor %}
+			<hr>
+		{% endfor %}
+		
+	</form>
+
+{% endblock %}
+{% block footer %}
+{% endblock %}

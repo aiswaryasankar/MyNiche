@@ -1,0 +1,18 @@
+
+<div>
+  <h2> {{p.title}} </h2>
+  {% if p.picUrl %}
+    <img src= {{p.picUrl}} style="width:100px;height:60px;">
+  {% endif %}
+</div>
+
+{#
+    <div class="post-date">
+      {{p.created.strftime("%b %d, %Y")}}
+    </div>
+  </div>
+#}
+
+<div>
+  <h5>{{p.content | safe}}<h5>
+</div>

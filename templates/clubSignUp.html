@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Welcome to the Interest Network
+{% endblock %}
+			
+{% block content %}
+<form method='post'>
+			<label>
+				<div>Club Name</div>
+				<input type="text" name="name" value={{name}}> 
+			</label>
+			<div class="error">{{err_user}}</div>
+			<label>
+				<div>Password</div>
+				<input type="text" name="password" value=''>
+			</label>
+			<div class='error'>{{err_pass}}
+			<label>
+				<div>Officer Ids</div>
+				{% for x in range(1,5) %}
+					Officer {{x}} <input type='text' name='officers'>
+					<br>
+				{% endfor %}
+			</label>
+			<label>
+				<div>Club Logo Url</div>
+				<input type="text" name="picUrl" value=''>
+			</label>
+			{# 
+				<label>
+				<div>Verify Password</div>
+				<input type="text" name="vPassword" value=''>
+				</label>
+				<div class="error">{{err_verify}}</div> 
+			#}
+			<hr>
+			<label>
+				<div>Choose interest categories:</div>
+				{% for x in topic_list %}
+					<input type="checkbox" name='interests' value={{x}}>{{x}}</input>
+					<br>
+				{% endfor %}
+			</label>
+
+			<input type="submit">
+		</form>
+{% endblock %}
+{% block footer %}
+{% endblock %}
+
